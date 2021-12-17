@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Patrick+Hand&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+   --font-001:'Patrick Hand', cursive;
+   --font-002: 'Fredoka One', cursive;
+   --font-003: 'Karla', sans-serif;
+   --font-004: 'Lobster', cursive;
+   --font-005: 'Gloria Hallelujah', cursive;
+   --color-001:#f6fff8;
+   --color-002:#eaf4f4;
+   --color-003:#cce3de;
+   --color-004:#a4c3b2;
+   --color-005:#6b9080;
+}
+
+body{
+    
+    max-height: 100vh;
+    width: 100%;
+}
+.container{
+    position: relative;
+    margin: 3rem auto;
+    height: 70%;
+    width: 80%;
+}
+.header{
+    position: relative;
+    background-color: var(--color-002);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+
+}
+.nav-bar{
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    right: -3.4rem;
+    top: 5rem;
+    background-color: var(--color-004);
+    padding: 1rem;
+    width: 220px;
+    border-radius: 15px;
+}
+.nav-bar::before{
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 40%;
+    background-color: var(--color-004);
+    height: 30px;
+    width: 35px;
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.btn-toggle{
+    padding: .3rem .6rem;
+    border: none;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.icon{
+    height: 35px;
+    width: 35px;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.item{
+    transition: all .4s ease-in;
+    border-bottom: 1px solid var(--color-003);
+    padding: .5rem 0;
+    width: 100%;
+
+}
+.item:not(:first-child){
+    margin-top: 5px;
+}
+.item a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: var(--font-003);
+    color: var(--color-001);
+}
+.item:not(:first-child):hover{
+    background-color: var(--color-005);
+    color: var(--color-002);
+    transform: scale(1.1);
+    border: none;
+}
+.visible{
+    opacity: 1;
+    visibility: visible;
+}
+.item .closed{
+    font-size: 2rem;
+}
+.item .closed:hover{
+    font-size: 2.4rem;
+    color: rgb(248, 115, 115);
+}
+
+
+/* THIS IS LOGO*/
+.logo{
+    font-size: 2rem;
+    font-family: var(--font-002);
+    font-weight: 300;
+    color: var(--color-005);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.425);
+}
+
+
+
+/* THIS IS DIV FOR MAIN CONTENT*/
+
+
+.main-content{
+    position: relative;
+    direction: rtl;
+    background-color: var(--color-001);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-content .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../img/img-2.png);
+    width: 100%;
+    height: 100%;
+    opacity: .2;
+    
+}
+.aside-left{
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    z-index: 10;
+}
+.aside-right{
+    
+    padding: 1rem;
+    flex: 1;
+    z-index: 10;
+}
+.heading-001{
+    font-size: 3rem;
+    font-family: var(--font-003);
+    color: var(--color-004);
+
+}
+.heading-001 strong{
+    margin:30px 20px 0 0;
+    font-family: var(--color-004);
+    text-shadow: 1px 2px 2px #fff;
+    color:#003e1f;
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.form-enter{
+    margin-top: 40px;
+    padding: 2rem 4rem;
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn-1{
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #80ed99;
+    font-size: 1.2rem;
+    font-family: var(--font-002);
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px;
+    transition: .3s all ease-out;
+}
+.btn-1:hover{
+    background-color: #61f383;
+    transform: scale(1.2);
+    color: black;
+}
+.btn-2{
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #003e1f;
+    font-size: 1.3rem;
+    font-family: var(--font-002);
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px;
+    transition: .4s all ease-out;
+}
+.btn-2:hover{
+    background-color: #25915bb7;
+    transform: scale(1.2);
+    color: #fff;
+    box-shadow: 0 5px 10px #fff;
+}

@@ -1,0 +1,60 @@
+
+.menu{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li {
+    left: 0;
+    position: absolute;
+    list-style: none;
+    transform-origin: 100px;
+    transform: rotate(calc(360deg / 8 * var(--i)));
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    transform: rotate(0deg) translateX(80px);
+
+}
+.menu.active li {
+    transform: rotate(calc(360deg / 8 * var(--i)));
+}
+.menu li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-004);
+    border-radius: 50%;
+    transform: rotate(calc(360deg / -8 * var(--i)));
+    box-shadow: 0 3px 4px rgba(0,0,0,0.15);
+    color: #003e1f;
+    transition: .5s;
+}
+.menu li a:hover{
+    background-color: #80ed99;
+    color: #fff;
+}
+.toggle{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 3px 4px rgba(0,0,0,0.15);
+    font-size: 2rem;
+    transition: transform 1.25s;
+}
+.menu.active .toggle{
+    transform: rotate(315deg);
+}

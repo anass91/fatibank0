@@ -1,0 +1,48 @@
+@media screen and  (max-width:400px) {
+    .container{
+        width: 100% !important;
+        margin: 0;
+    }
+    .header{
+        padding: 1rem;
+    }
+    .header .logo{
+        
+        font-size: 1.5rem;
+    }
+    .nav-bar{
+        right: 3rem;
+        top: 6rem;
+    }
+    .icon{
+        height: 30px;
+        width: 30px;
+    }
+    .btn-toggle{
+        padding: .2rem .4rem;
+    }
+    .main-content{
+        flex-direction: column;
+    }
+    .heading-001{
+        font-size: 2rem;
+    }
+    .heading-001 strong{
+        margin-top: 20px;
+        font-size: 2.6rem;
+    }
+    .aside-right{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .form-enter{
+        width: 100% !important;
+        padding: 1rem 2rem;
+    }
+    .aside-left{
+        width: 100%;
+    }
+}
